@@ -10,7 +10,7 @@ public class EnemyLaser : MonoBehaviour
     private void Start()
     {
         // Invocar repetidamente el método Disparar cada 1 segundo
-        InvokeRepeating("Disparar", 1.6f, 1.6f);
+        InvokeRepeating("Disparar", 1.3f, 1.3f);
     }
 
     private void Disparar()

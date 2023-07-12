@@ -40,7 +40,7 @@ public class GeneradorFormas : MonoBehaviour
 
             // Generate a random position on top of camera 
           //  Vector3 posicionAleatoria = new Vector3(Random.Range(-rangoX, rangoX), mainCamera.transform.position.y + mainCamera.orthographicSize, 0f);
-            Vector3 posicionAleatoria = new Vector3(Random.Range(-rangoX, rangoX), mainCamera.transform.position.y + mainCamera.orthographicSize + 5f, 0f);
+            Vector3 posicionAleatoria = new Vector3(Random.Range(-rangoX, rangoX), mainCamera.transform.position.y + mainCamera.orthographicSize + 3f, 0f);
 
             //instantiate a new form on the random position
             formasGeneradas[i] = Instantiate(formaPrefab, posicionAleatoria, Quaternion.identity);
