@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7057908514523482277}
   - component: {fileID: -6025042987032971803}
   - component: {fileID: 561118112824485392}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sand
   m_TagString: Meteroids
   m_Icon: {fileID: 0}

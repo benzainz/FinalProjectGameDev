@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondSceneName: Enemies
-  timeToSwitch: 30
+  timeToSwitch: 15.6
 --- !u!4 &342770759
 Transform:
   m_ObjectHideFlags: 0
@@ -812,6 +812,10 @@ PrefabInstance:
     - target: {fileID: 7122380562096616711, guid: e5774fd5a8e794f73952a8bcf5d0c4fe, type: 3}
       propertyPath: m_Name
       value: SpawnThings
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122380562096616711, guid: e5774fd5a8e794f73952a8bcf5d0c4fe, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

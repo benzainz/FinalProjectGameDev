@@ -12,12 +12,13 @@ public class PlayerController : MonoBehaviour
 
     //Animator animator;
     AnimationStateChanger animationStateChanger;
+    BackToMainMenu backToMainMenu;
     // Start is called before the first frame update
     void Awake()
     {
         // animator = GetComponent<Animator>();
         animationStateChanger = GetComponent<AnimationStateChanger>();
-
+        backToMainMenu = GetComponent<BackToMainMenu>();
 
     }
 
@@ -77,7 +78,8 @@ public class PlayerController : MonoBehaviour
 
             Destroy(gameObject,0.5f);
             Destroy(collision.gameObject);
-
+            //back to main menu funct
+            backToMainMenu.BackToMain();
 
         }
 

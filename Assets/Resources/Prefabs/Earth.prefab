@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8384395880264046867}
   - component: {fileID: -2357730270847439276}
   - component: {fileID: 5542424280605528449}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Earth
   m_TagString: Meteroids
   m_Icon: {fileID: 0}
