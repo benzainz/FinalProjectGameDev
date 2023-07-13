@@ -65,7 +65,11 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("EnemyLaser") || collision.gameObject.CompareTag("Meteroids") || collision.gameObject.CompareTag("Enemy1"))
+        if (collision.gameObject.CompareTag("EnemyLaser") ||
+            collision.gameObject.CompareTag("Earth") ||
+            collision.gameObject.CompareTag("Rock") ||
+            collision.gameObject.CompareTag("Sand") ||
+            collision.gameObject.CompareTag("Enemy1"))
         {
             //call function to play audio on collision
             //audioSource.Play();
@@ -79,7 +83,7 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject,0.5f);
             Destroy(collision.gameObject);
             //back to main menu funct
-            backToMainMenu.BackToMain();
+            //backToMainMenu.BackToMain();
 
         }
 

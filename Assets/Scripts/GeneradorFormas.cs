@@ -7,8 +7,9 @@ public class GeneradorFormas : MonoBehaviour
     public GameObject[] formaPrefabs;//Array of prefabs to spawn forms
     public int cantidadFormas = 10; //number of forms to generate
     public float tiempoEntreGeneraciones = 2f; //Time elapsed each time a shape is created"
-    public float rangoX = 5f;
+    public float rangoX = 4f;
     public float tiempoVidaFormas = 8f; // Time passed before destroy each form
+    public float alturaDeSpawn = 3f;
 
     private Camera mainCamera;
     private GameObject[] formasGeneradas;
@@ -39,8 +40,8 @@ public class GeneradorFormas : MonoBehaviour
             GameObject formaPrefab = formaPrefabs[Random.Range(0, formaPrefabs.Length)];
 
             // Generate a random position on top of camera 
-          //  Vector3 posicionAleatoria = new Vector3(Random.Range(-rangoX, rangoX), mainCamera.transform.position.y + mainCamera.orthographicSize, 0f);
-            Vector3 posicionAleatoria = new Vector3(Random.Range(-rangoX, rangoX), mainCamera.transform.position.y + mainCamera.orthographicSize + 3f, 0f);
+            //  Vector3 posicionAleatoria = new Vector3(Random.Range(-rangoX, rangoX), mainCamera.transform.position.y + mainCamera.orthographicSize, 0f);
+            Vector3 posicionAleatoria = new Vector3(Random.Range(-rangoX, rangoX), mainCamera.transform.position.y + mainCamera.orthographicSize + alturaDeSpawn, 0f);
 
             //instantiate a new form on the random position
             formasGeneradas[i] = Instantiate(formaPrefab, posicionAleatoria, Quaternion.identity);
@@ -58,3 +59,4 @@ public class GeneradorFormas : MonoBehaviour
     }
 
 }
+

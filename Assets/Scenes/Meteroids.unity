@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondSceneName: Enemies
-  timeToSwitch: 15.6
+  timeToSwitch: 30.9
 --- !u!4 &342770759
 Transform:
   m_ObjectHideFlags: 0
@@ -329,7 +329,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &791667821
 PrefabInstance:
@@ -349,7 +349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5710477707315197586, guid: d13194f77acaa4eeb986f67cb0ccb620, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.04
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5710477707315197586, guid: d13194f77acaa4eeb986f67cb0ccb620, type: 3}
       propertyPath: m_LocalPosition.y
@@ -406,7 +406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8575756379285913114, guid: 991d2b30eea1d4eb385724af4173ce4e, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8575756379285913114, guid: 991d2b30eea1d4eb385724af4173ce4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -572,7 +572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1244510141
 AudioSource:
   m_ObjectHideFlags: 0
@@ -580,7 +580,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244510140}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0869bcc8afadcbd4182169d7dc3e6484, type: 3}
@@ -698,11 +698,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 886156089898063665, guid: 290e0ddbfa6a14fe8b301f4cfc40faa5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 886156089898063665, guid: 290e0ddbfa6a14fe8b301f4cfc40faa5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 886156089898063665, guid: 290e0ddbfa6a14fe8b301f4cfc40faa5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -754,17 +754,57 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1228422148071869376, guid: e5774fd5a8e794f73952a8bcf5d0c4fe, type: 3}
+      propertyPath: rangoX
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228422148071869376, guid: e5774fd5a8e794f73952a8bcf5d0c4fe, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228422148071869376, guid: e5774fd5a8e794f73952a8bcf5d0c4fe, type: 3}
+      propertyPath: alturaDeSpawn
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228422148071869376, guid: e5774fd5a8e794f73952a8bcf5d0c4fe, type: 3}
       propertyPath: cantidadFormas
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1228422148071869376, guid: e5774fd5a8e794f73952a8bcf5d0c4fe, type: 3}
-      propertyPath: tiempoVidaFormas
-      value: 6
+      propertyPath: formaPrefabs.Array.size
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1228422148071869376, guid: e5774fd5a8e794f73952a8bcf5d0c4fe, type: 3}
       propertyPath: tiempoEntreGeneraciones
-      value: 0.65
+      value: 0.22
       objectReference: {fileID: 0}
+    - target: {fileID: 1228422148071869376, guid: e5774fd5a8e794f73952a8bcf5d0c4fe, type: 3}
+      propertyPath: formaPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 7839378748361159839, guid: 50137dd69a56e4cf2be2c3742ae550ad, type: 3}
+    - target: {fileID: 1228422148071869376, guid: e5774fd5a8e794f73952a8bcf5d0c4fe, type: 3}
+      propertyPath: formaPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 4555703575321472054, guid: 401a7f95aaf2f4f0fbcf5a87a7ab95ab, type: 3}
+    - target: {fileID: 1228422148071869376, guid: e5774fd5a8e794f73952a8bcf5d0c4fe, type: 3}
+      propertyPath: formaPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1292614728343716262, guid: a5d7a766c454e4a42b7b7854971c5159, type: 3}
+    - target: {fileID: 1228422148071869376, guid: e5774fd5a8e794f73952a8bcf5d0c4fe, type: 3}
+      propertyPath: formaPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 1292614728343716262, guid: a5d7a766c454e4a42b7b7854971c5159, type: 3}
+    - target: {fileID: 1228422148071869376, guid: e5774fd5a8e794f73952a8bcf5d0c4fe, type: 3}
+      propertyPath: formaPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 1292614728343716262, guid: a5d7a766c454e4a42b7b7854971c5159, type: 3}
+    - target: {fileID: 1228422148071869376, guid: e5774fd5a8e794f73952a8bcf5d0c4fe, type: 3}
+      propertyPath: formaPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 4555703575321472054, guid: 401a7f95aaf2f4f0fbcf5a87a7ab95ab, type: 3}
+    - target: {fileID: 1228422148071869376, guid: e5774fd5a8e794f73952a8bcf5d0c4fe, type: 3}
+      propertyPath: formaPrefabs.Array.data[6]
+      value: 
+      objectReference: {fileID: 4555703575321472054, guid: 401a7f95aaf2f4f0fbcf5a87a7ab95ab, type: 3}
     - target: {fileID: 2792114407051064768, guid: e5774fd5a8e794f73952a8bcf5d0c4fe, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -812,10 +852,6 @@ PrefabInstance:
     - target: {fileID: 7122380562096616711, guid: e5774fd5a8e794f73952a8bcf5d0c4fe, type: 3}
       propertyPath: m_Name
       value: SpawnThings
-      objectReference: {fileID: 0}
-    - target: {fileID: 7122380562096616711, guid: e5774fd5a8e794f73952a8bcf5d0c4fe, type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

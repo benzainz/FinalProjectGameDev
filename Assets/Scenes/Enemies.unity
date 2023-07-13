@@ -367,7 +367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6333035947021363188, guid: 5019283c3cc514fc381a8fea6972f97f, type: 3}
       propertyPath: spawnRangeX
-      value: 5.76
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6333035947021363188, guid: 5019283c3cc514fc381a8fea6972f97f, type: 3}
       propertyPath: spawnInterval
