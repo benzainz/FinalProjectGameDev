@@ -10,6 +10,9 @@ TagManager:
   - EnemyLaser
   - PlayerLaser
   - Meteroids
+  - Earth
+  - Sand
+  - Rock
   layers:
   - Default
   - TransparentFX
@@ -20,7 +23,7 @@ TagManager:
   - PlayerLaser
   - EnemyLaser
   - Enemy1
-  - 
+  - Meteroids
   - 
   - 
   - 

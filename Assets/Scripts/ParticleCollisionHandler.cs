@@ -6,11 +6,16 @@ public class ParticleCollisionHandler : MonoBehaviour
 {
     private ParticleSystem myparticleSystem;
 
-    private void Start()
+    void Awake()
     {
         myparticleSystem = GetComponent<ParticleSystem>();
     }
+    private void Start()
+    {
+        
+    }
 
+    [System.Obsolete]
     private void OnParticleCollision(GameObject other)
     {
         ParticleCollisionEvent[] collisionEvents = new ParticleCollisionEvent[myparticleSystem.GetSafeCollisionEventSize()];
