@@ -763,7 +763,7 @@ PrefabInstance:
       objectReference: {fileID: 1536851583}
     - target: {fileID: 1892476032299345740, guid: 6e1d8210b07134b06bf852d2896fb472, type: 3}
       propertyPath: tiempoEntreScripts
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2209171141273846760, guid: 6e1d8210b07134b06bf852d2896fb472, type: 3}
       propertyPath: m_RootOrder
@@ -848,11 +848,11 @@ MonoBehaviour:
   formaPrefabs:
   - {fileID: 7912060483498823548, guid: 60e8733e157e14cefa51f08b6777aecd, type: 3}
   cantidadFormas: 1
-  tiempoEntreGeneraciones: 1
-  rangoX: 6
+  tiempoEntreGeneraciones: 2.35
+  rangoX: 4.94
   tiempoVidaFormas: 20
-  alturaDeSpawn: 9
-  tiempoTotalGeneracion: 20
+  alturaDeSpawn: 14.2
+  tiempoTotalGeneracion: 15
 --- !u!114 &1536851584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -875,10 +875,10 @@ MonoBehaviour:
   - {fileID: 1292614728343716262, guid: a5d7a766c454e4a42b7b7854971c5159, type: 3}
   cantidadFormas: 1
   tiempoEntreGeneraciones: 0.41
-  rangoX: 6.5
+  rangoX: 6
   tiempoVidaFormas: 6
-  alturaDeSpawn: 6
-  tiempoTotalGeneracion: 10
+  alturaDeSpawn: 3
+  tiempoTotalGeneracion: 15
 --- !u!1001 &3908401865206015170
 PrefabInstance:
   m_ObjectHideFlags: 0
