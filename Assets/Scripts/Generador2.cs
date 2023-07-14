@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GeneradorFormas : MonoBehaviour
+public class Generador2 : MonoBehaviour
 {
     public GameObject[] formaPrefabs;
     public int cantidadFormas = 2;

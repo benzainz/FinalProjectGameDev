@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2209171141273846760}
-  - component: {fileID: 2186498069826508218}
+  - component: {fileID: 1892476032299345740}
   m_Layer: 0
-  m_Name: SpawnBigThings
+  m_Name: ScriptRunner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,26 +30,19 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2186498069826508218
+--- !u!114 &1892476032299345740
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4896592286352245703}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f19eeb77ebeb4911af4fe748406e01d, type: 3}
+  m_Script: {fileID: 11500000, guid: 99d0da6ab3ca9427b8a24bce84bea288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  formaPrefabs:
-  - {fileID: 7912060483498823548, guid: 60e8733e157e14cefa51f08b6777aecd, type: 3}
-  - {fileID: 6621644172409749257, guid: 1630778beb12d4cf59070c0b6c9e8ff1, type: 3}
-  cantidadFormas: 1
-  tiempoEntreGeneraciones: 5
-  rangoX: 6.5
-  tiempoVidaFormas: 20
-  alturaDeSpawn: 7
-  tiempoTotalGeneracion: 20
+  script1: {fileID: 0}
+  script2: {fileID: 0}
