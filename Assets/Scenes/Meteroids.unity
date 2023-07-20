@@ -344,17 +344,9 @@ PrefabInstance:
       value: SpaceShip
       objectReference: {fileID: 0}
     - target: {fileID: 4555064732232245162, guid: d13194f77acaa4eeb986f67cb0ccb620, type: 3}
-      propertyPath: speed
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4555064732232245162, guid: d13194f77acaa4eeb986f67cb0ccb620, type: 3}
-      propertyPath: limiteDerecho
-      value: 7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4555064732232245162, guid: d13194f77acaa4eeb986f67cb0ccb620, type: 3}
-      propertyPath: limiteIzquierdo
-      value: -7.5
-      objectReference: {fileID: 0}
+      propertyPath: explotionSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: a05a275a5c60f4ceb86b48732e6cbc0b, type: 3}
     - target: {fileID: 5710477707315197586, guid: d13194f77acaa4eeb986f67cb0ccb620, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -584,7 +576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1244510141
 AudioSource:
   m_ObjectHideFlags: 0
@@ -592,9 +584,9 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244510140}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5489555700348438797, guid: 060a34cf21914440daeb3172039fc7a9, type: 2}
   m_audioClip: {fileID: 8300000, guid: 0869bcc8afadcbd4182169d7dc3e6484, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.454
@@ -689,7 +681,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244510140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.6212173, y: -0.5768549, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -803,7 +795,7 @@ MonoBehaviour:
   rangoX: 5.45
   tiempoVidaFormas: 20
   alturaDeSpawn: 14.2
-  tiempoTotalGeneracion: 15
+  tiempoTotalGeneracion: 20
 --- !u!114 &1536851584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,7 +822,7 @@ MonoBehaviour:
   tiempoVidaFormas: 6
   alturaDeSpawn: 3
   tiempoTotalGeneracion: 20
---- !u!1001 &1686005153
+--- !u!1001 &1846980794
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2

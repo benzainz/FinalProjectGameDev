@@ -7,10 +7,11 @@ public class PlayerLaser : MonoBehaviour
 
     public float speed = 5f;
     AnimationStateChanger animationStateChanger;
-
-    // Start is called before the first frame update
+    AudioSource audioSource;
+    // Start is called before the first frame update}
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         animationStateChanger = GetComponent<AnimationStateChanger>();
     }
 
@@ -30,27 +31,21 @@ public class PlayerLaser : MonoBehaviour
         temp.y += speed * Time.deltaTime;
         transform.position = temp;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy1") ||
-            collision.gameObject.CompareTag("Sand") ||
-            collision.gameObject.CompareTag("Earth"))
+        if (collision.gameObject.CompareTag("Enemy1")   ||
+            collision.gameObject.CompareTag("Sand")     ||
+            collision.gameObject.CompareTag("Earth")    )
         {
-            //call function to play audio on collision
-            //audioSource.Play();
-            //Debug.Log("¡Boom!");
-
-            // Aquí puedes mostrar el mensaje en la pantalla o realizar cualquier otra acción deseada
-
-            // animator.Play("Destroy");
             Destroy(gameObject);
-            //Destroy(collision.gameObject);
-
         }
         if (collision.gameObject.CompareTag("Rock")) {
-            Debug.Log("¡Boom!");
+           // Debug.Log("¡Boom!");
            animationStateChanger.ChangeAnimationState("Destroy", 0.01f);
            Destroy(gameObject, 0.02f);
+           audioSource.Play();
 
             //Destroy(gameObject);
 
