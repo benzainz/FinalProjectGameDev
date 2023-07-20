@@ -366,13 +366,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6333035947021363188, guid: 5019283c3cc514fc381a8fea6972f97f, type: 3}
-      propertyPath: spawnRangeX
-      value: 6
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 741088824227723250, guid: 8262eaec4ad9a464b8840de6891e59d0, type: 3}
+    - target: {fileID: 6333035947021363188, guid: 5019283c3cc514fc381a8fea6972f97f, type: 3}
+      propertyPath: numberOfEnemies
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6333035947021363188, guid: 5019283c3cc514fc381a8fea6972f97f, type: 3}
-      propertyPath: spawnInterval
-      value: 0.55
-      objectReference: {fileID: 0}
+      propertyPath: enemyPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 741088824227723250, guid: 8262eaec4ad9a464b8840de6891e59d0, type: 3}
+    - target: {fileID: 6333035947021363188, guid: 5019283c3cc514fc381a8fea6972f97f, type: 3}
+      propertyPath: enemyPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 4256772218336100082, guid: 87dfc725c22ed453aaa93da42ec54294, type: 3}
     - target: {fileID: 7402390335797943121, guid: 5019283c3cc514fc381a8fea6972f97f, type: 3}
       propertyPath: m_Name
       value: SpawnEnemies

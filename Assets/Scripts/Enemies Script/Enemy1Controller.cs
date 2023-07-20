@@ -9,6 +9,7 @@ public class Enemy1Controller: MonoBehaviour
 {
     //Animator animator;
     AnimationStateChanger animationStateChanger;
+    AudioSource audioSource;
     // Start is called before the first frame update
     void Awake() {
         //animator = GetComponent<Animator>();
@@ -18,7 +19,7 @@ public class Enemy1Controller: MonoBehaviour
     }
     void Start()
     {
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,6 +37,7 @@ public class Enemy1Controller: MonoBehaviour
 
             // Aquí puedes mostrar el mensaje en la pantalla o realizar cualquier otra acción deseada
             //Debug.Log("Collision with Laser detected001");
+            audioSource.Play();
             animationStateChanger.ChangeAnimationState("Destroy",0.4f);
             Destroy(gameObject,0.5f);
 

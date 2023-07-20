@@ -343,10 +343,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceShip
       objectReference: {fileID: 0}
-    - target: {fileID: 4555064732232245162, guid: d13194f77acaa4eeb986f67cb0ccb620, type: 3}
-      propertyPath: explotionSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: a05a275a5c60f4ceb86b48732e6cbc0b, type: 3}
     - target: {fileID: 5710477707315197586, guid: d13194f77acaa4eeb986f67cb0ccb620, type: 3}
       propertyPath: m_RootOrder
       value: 1
