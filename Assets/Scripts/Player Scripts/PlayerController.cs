@@ -12,17 +12,19 @@ public class PlayerController : MonoBehaviour
     AudioSource audioSource;
     
     //public AudioSource audioSourceExplotion;
-
-
     private float tiempoUltimaCreacion = 0f; // Tiempo en el que se creó el último láser
 
     AnimationStateChanger animationStateChanger;
     BackToMainMenu backToMainMenu;
-  
+
+    private void Awake()
+    {
+        backToMainMenu = GetComponent<BackToMainMenu>();
+    }
     void Start()
     {
         animationStateChanger = GetComponent<AnimationStateChanger>();
-        backToMainMenu = GetComponent<BackToMainMenu>();
+        
         //audioSourceExplotion = GetComponent<AudioSource>();
         audioSource = GetComponent<AudioSource>();
         
@@ -72,27 +74,91 @@ public class PlayerController : MonoBehaviour
         audioSource.Play();
     }
 
+    //void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    // Código para las colisiones
+    //    if (collision.gameObject.CompareTag("EnemyLaser")   ||
+    //        collision.gameObject.CompareTag("Earth")        ||
+    //        collision.gameObject.CompareTag("Rock")         ||
+    //        collision.gameObject.CompareTag("Sand")         ||
+    //        collision.gameObject.CompareTag("Enemy1")        )
+    //    {
+    //        //call function to play audio on collision
+    //        //audioSourceExplotion.Play();
+    //        audioSource.PlayOneShot(explotionSFX);
+
+    //        animationStateChanger.ChangeAnimationState("Destroy", 0.4f);
+
+    //        Destroy(gameObject, 0.5f);
+    //        Destroy(collision.gameObject);
+
+    //        //back to main menu coroutine
+
+           
+            
+    //        StartCoroutine(WaitAndBackToMain());
+    //        //backToMainMenu.BackToMain();
+    //    }
+    //}
+
+
+    //IEnumerator WaitAndBackToMain()
+    //{
+    //    yield return new WaitForSeconds(1f);
+    //    Debug.Log("hola desde la corutina");
+    //    backToMainMenu.BackToMain();
+
+    //    yield return null;
+    //}
+
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Código para las colisiones
-        if (collision.gameObject.CompareTag("EnemyLaser")   ||
-            collision.gameObject.CompareTag("Earth")        ||
-            collision.gameObject.CompareTag("Rock")         ||
-            collision.gameObject.CompareTag("Sand")         ||
-            collision.gameObject.CompareTag("Enemy1")        )
-        {
-            //call function to play audio on collision
-            //audioSourceExplotion.Play();
-            audioSource.PlayOneShot(explotionSFX);
+        if (collision.gameObject.CompareTag("EnemyLaser") ||
+            collision.gameObject.CompareTag("Earth") ||
+            collision.gameObject.CompareTag("Rock") ||
+            collision.gameObject.CompareTag("Sand") ||
+            collision.gameObject.CompareTag("Enemy1"))
+            {
+                //call function to play audio on collision
+                //audioSourceExplotion.Play();
+                audioSource.PlayOneShot(explotionSFX);
+                Destroy(collision.gameObject);
+                animationStateChanger.ChangeAnimationState("Destroy", 0.4f);
 
+                // Desactivar el componente PlayerController en lugar de destruir el objeto
+                // Esto permitirá que la corutina se ejecute antes de que el objeto sea destruido.
+                enabled = false;
+
+                //back to main menu coroutine
+                StartCoroutine(WaitAndBackToMain());
+            }
+        else if (collision.gameObject.CompareTag("BigR"))
+            {
+            audioSource.PlayOneShot(explotionSFX);
+            //Destroy(collision.gameObject);
             animationStateChanger.ChangeAnimationState("Destroy", 0.4f);
 
-            Destroy(gameObject, 0.5f);
-            Destroy(collision.gameObject);
-            
-            //back to main menu funct
-            //backToMainMenu.BackToMain();
+            // Desactivar el componente PlayerController en lugar de destruir el objeto
+            // Esto permitirá que la corutina se ejecute antes de que el objeto sea destruido.
+            enabled = false;
+
+            //back to main menu coroutine
+            StartCoroutine(WaitAndBackToMain());
+
 
         }
     }
+
+    IEnumerator WaitAndBackToMain()
+    {
+        yield return new WaitForSeconds(0.7f);
+        Debug.Log("hola desde la corutina");
+
+        // Llamar a la función BackToMain del componente BackToMainMenu
+        // Esto se hará después de que la corutina se haya completado.
+        backToMainMenu.BackToMain();
+    }
+
 }

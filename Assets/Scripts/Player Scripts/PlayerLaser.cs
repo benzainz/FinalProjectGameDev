@@ -41,7 +41,7 @@ public class PlayerLaser : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (collision.gameObject.CompareTag("Rock")) {
+        if (collision.gameObject.CompareTag("Rock") || collision.gameObject.CompareTag("BigR")) {
            // Debug.Log("¡Boom!");
            animationStateChanger.ChangeAnimationState("Destroy", 0.01f);
            Destroy(gameObject, 0.02f);
