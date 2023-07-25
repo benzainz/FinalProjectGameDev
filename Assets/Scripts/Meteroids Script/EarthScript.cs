@@ -24,8 +24,8 @@ public class EarthScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PlayerLaser"))
         {
-          
-            audioSource.Play();
+
+            GetComponent<MakeSound>().PlaySound();
 
             animationStateChanger.ChangeAnimationState("Destroy", 0.04f);
 

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -6163332656859662363}
   - component: {fileID: -1137687664501882250}
   - component: {fileID: 1064037065350124219}
+  - component: {fileID: 8168591047719407429}
   m_Layer: 0
   m_Name: Sand
   m_TagString: Sand
@@ -36,7 +37,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7057908514523482277
 SpriteRenderer:
@@ -204,10 +205,10 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1292614728343716262}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 188274200956373127, guid: 060a34cf21914440daeb3172039fc7a9, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 80dc75fbcf8564e0d8f73022276e1ed6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2239c8f78294743f9aeefa50c36df299, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -293,3 +294,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8168591047719407429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292614728343716262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b54a25cba83400589f42a81fbf597e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 363ab58a8a32d4169a8b4677803ee69e, type: 3}
