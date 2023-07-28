@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 //clase de colision,  el playerLaser destruye al enemy1
 //y termina con una animacion
-public class Enemy1Controller: MonoBehaviour
+public class EnemyCollisionScript : MonoBehaviour
 {
     //Animator animator;
     AnimationStateChanger animationStateChanger;
@@ -31,12 +31,7 @@ public class Enemy1Controller: MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PlayerLaser"))
         {
-            //call function to play audio on collision
-            //audioSource.Play();
-            //Debug.Log("¡Boom!");
-
-            // Aquí puedes mostrar el mensaje en la pantalla o realizar cualquier otra acción deseada
-            //Debug.Log("Collision with Laser detected001");
+            
             audioSource.Play();
             animationStateChanger.ChangeAnimationState("Destroy",0.4f);
             Destroy(gameObject,0.5f);
