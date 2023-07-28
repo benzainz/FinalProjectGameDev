@@ -132,10 +132,11 @@ public class PlayerController : MonoBehaviour
                 audioSource.PlayOneShot(explotionSFX);
                 Destroy(collision.gameObject);
                 animationStateChanger.ChangeAnimationState("Destroy", 0.4f);
-
-                // Desactivar el componente PlayerController en lugar de destruir el objeto
-                // Esto permitirá que la corutina se ejecute antes de que el objeto sea destruido.
-                enabled = false;
+            //Destroy(gameObject);
+            // Desactivar el componente PlayerController en lugar de destruir el objeto
+            // Esto permitirá que la corutina se ejecute antes de que el objeto sea destruido.
+            enabled = false;
+                
 
                 //back to main menu coroutine
                 StartCoroutine(WaitAndBackToMain());
@@ -160,11 +161,11 @@ public class PlayerController : MonoBehaviour
     IEnumerator WaitAndBackToMain()
     {
         yield return new WaitForSeconds(0.7f);
-        //Debug.Log("hola desde la corutina");
+        Debug.Log("hola desde la corutina");
 
         // Llamar a la función BackToMain del componente BackToMainMenu
         // Esto se hará después de que la corutina se haya completado.
-        backToMainMenu.BackToMain();
+       // backToMainMenu.BackToMain();
     }
 
 }

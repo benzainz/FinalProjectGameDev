@@ -1,6 +1,44 @@
 //using System.Collections;
 //using UnityEngine;
 
+//public class EnemySpawner2 : MonoBehaviour
+//{
+//    public GameObject[] enemyPrefabs; // Array de prefabs de enemigos
+//    public float spawnInterval = 2f;
+//    public float spawnRangeX = 7f;
+//    public float spawnHeight = 6f;
+//    public float destroyedAfter = 9f;
+
+//    private void Start()
+//    {
+//        StartCoroutine(SpawnEnemies());
+//    }
+
+//    private IEnumerator SpawnEnemies()
+//    {
+//        while (true)
+//        {
+//            // Seleccionar aleatoriamente un prefab de enemigo del array
+//            int randomIndex = Random.Range(0, enemyPrefabs.Length);
+//            GameObject enemyPrefab = enemyPrefabs[randomIndex];
+
+//            // Generar una posición aleatoria dentro del rango especificado
+//            float randomX = Random.Range(-spawnRangeX, spawnRangeX);
+//            Vector3 spawnPosition = new Vector3(randomX, spawnHeight, 0f);
+
+//            // Instanciar el prefab de enemigo seleccionado en la posición generada
+//            GameObject newObject = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+
+//            Destroy(newObject, destroyedAfter);
+//            yield return new WaitForSeconds(spawnInterval);
+//        }
+//    }
+//}
+
+
+//using System.Collections;
+//using UnityEngine;
+
 //public class EnemySpawner : MonoBehaviour
 //{
 //    public GameObject[] enemyPrefabs; // Array de prefabs de enemigos
@@ -38,51 +76,10 @@
 //        }
 //    }
 //}
-
-//using System.Collections;
-//using UnityEngine;
-
-//public class EnemySpawner : MonoBehaviour
-//{
-//    public GameObject[] enemyPrefabs; // Array de prefabs de enemigos
-//    public float spawnInterval = 2f;
-//    public float spawnRangeX = 7f;
-//    public float spawnHeight = 6f;
-//    public float destroyedAfter = 9f;
-//    public float tiempoTotalGeneracion = 10f; // Tiempo total de generación en segundos
-
-//    private void Start()
-//    {
-//        StartCoroutine(SpawnEnemies());
-//    }
-
-//    private IEnumerator SpawnEnemies()
-//    {
-//        float elapsedTime = 0f; // Tiempo transcurrido
-//        while (elapsedTime < tiempoTotalGeneracion)
-//        {
-//            // Seleccionar aleatoriamente un prefab de enemigo del array
-//            int randomIndex = Random.Range(0, enemyPrefabs.Length);
-//            GameObject enemyPrefab = enemyPrefabs[randomIndex];
-
-//            // Generar una posición aleatoria dentro del rango especificado
-//            float randomX = Random.Range(-spawnRangeX, spawnRangeX);
-//            Vector3 spawnPosition = new Vector3(randomX, spawnHeight, 0f);
-
-//            // Instanciar el prefab de enemigo seleccionado en la posición generada
-//            GameObject newObject = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
-
-//            Destroy(newObject, destroyedAfter);
-//            elapsedTime += spawnInterval; // Incrementar el tiempo transcurrido
-//            yield return new WaitForSeconds(spawnInterval);
-//        }
-//    }
-//}
-
 using System.Collections;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemySpawner2 : MonoBehaviour
 {
     public GameObject[] enemyPrefabs; // Array de prefabs de enemigos
     public float spawnInterval = 2f;
