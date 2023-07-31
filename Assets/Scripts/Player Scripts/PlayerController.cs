@@ -125,6 +125,7 @@ public class PlayerController : MonoBehaviour
             collision.gameObject.CompareTag("Earth") ||
             collision.gameObject.CompareTag("Rock") ||
             collision.gameObject.CompareTag("Sand") ||
+            collision.gameObject.CompareTag("Fire") ||
             collision.gameObject.CompareTag("Enemy1"))
             {
                 //call function to play audio on collision

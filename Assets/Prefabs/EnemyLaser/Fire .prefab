@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 451665081234871199}
   - component: {fileID: 8154247308189007261}
   - component: {fileID: 2450253569956530745}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'Fire '
-  m_TagString: Untagged
+  m_TagString: EnemyLaser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,11 +28,11 @@ Transform:
   m_GameObject: {fileID: 5153467545898813109}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.391092, y: -0.042183563, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &451665081234871199
 SpriteRenderer:

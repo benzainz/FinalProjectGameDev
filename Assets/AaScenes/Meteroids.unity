@@ -659,9 +659,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1536851583}
     - target: {fileID: 1892476032299345740, guid: 6e1d8210b07134b06bf852d2896fb472, type: 3}
+      propertyPath: scripts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892476032299345740, guid: 6e1d8210b07134b06bf852d2896fb472, type: 3}
       propertyPath: tiempoEntreScripts
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 1892476032299345740, guid: 6e1d8210b07134b06bf852d2896fb472, type: 3}
+      propertyPath: scripts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1536851584}
+    - target: {fileID: 1892476032299345740, guid: 6e1d8210b07134b06bf852d2896fb472, type: 3}
+      propertyPath: scripts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1536851583}
     - target: {fileID: 2209171141273846760, guid: 6e1d8210b07134b06bf852d2896fb472, type: 3}
       propertyPath: m_RootOrder
       value: 7
