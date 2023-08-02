@@ -166,12 +166,13 @@ GameObject:
   - component: {fileID: 6347494508727606925}
   - component: {fileID: 764869765400048993}
   - component: {fileID: 4508446270918363241}
-  - component: {fileID: 8345589614886855524}
   - component: {fileID: 7951198463464348202}
   - component: {fileID: 2145043533930831329}
-  - component: {fileID: 7259595276918730908}
   - component: {fileID: 7836898360437703126}
   - component: {fileID: 4297968226120471655}
+  - component: {fileID: 8640816888580638238}
+  - component: {fileID: 5917259380589014825}
+  - component: {fileID: 3612766712101629108}
   m_Layer: 8
   m_Name: BigBoss1
   m_TagString: Enemy1
@@ -278,51 +279,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!61 &8345589614886855524
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9001672220051514595}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.004104376, y: -0.009988248}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.8125, y: 1.375}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.839357, y: 1.4365429}
-  m_EdgeRadius: 0
 --- !u!82 &7951198463464348202
 AudioSource:
   m_ObjectHideFlags: 0
@@ -440,18 +396,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7259595276918730908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9001672220051514595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d188ea39773244de3b2b204ae9f5f546, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7836898360437703126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,3 +429,93 @@ MonoBehaviour:
   EnemyAtackPoint2: {fileID: 575924786747146446}
   EnemyAtackPoint3: {fileID: 1855470063387046770}
   EnemyAtackPoint4: {fileID: 4971409341306464062}
+--- !u!114 &8640816888580638238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9001672220051514595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a08c17bc8e3b4b1f958fa558e5adebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &5917259380589014825
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9001672220051514595}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.8125, y: 1.375}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.9122996, y: 0.7003396}
+      - {x: -0.9353962, y: 0.70461935}
+      - {x: -1.1118969, y: 0.42490435}
+      - {x: -1.4190897, y: 0.19952673}
+      - {x: -1.4148097, y: -0.20210923}
+      - {x: -0.9781945, y: -0.3237143}
+      - {x: -0.7213172, y: -0.69507784}
+      - {x: -0.58000946, y: -0.7003394}
+      - {x: -0.5759022, y: -0.449556}
+      - {x: -0.0022454336, y: -0.32204437}
+      - {x: 0.57964313, y: -0.46011406}
+      - {x: 0.5973928, y: -0.7050297}
+      - {x: 0.7162399, y: -0.69605964}
+      - {x: 0.9813711, y: -0.3171134}
+      - {x: 1.4148098, y: -0.20210925}
+      - {x: 1.4223051, y: 0.19721353}
+      - {x: 1.2222173, y: 0.37330246}
+  m_UseDelaunayMesh: 0
+--- !u!114 &3612766712101629108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9001672220051514595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d164734059c2f4affbf5c7f67cae6789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 2378648185652776922, guid: 8a2140955c8d14e17820dd7f4932b6f9, type: 3}
+  velocidadLaser: 5
+  TiempoGeneracionDeLaser: 3
+  playerTag: Player
