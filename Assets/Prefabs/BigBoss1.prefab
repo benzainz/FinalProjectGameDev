@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1855470063387046770}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyAtackPoint3
-  m_TagString: Untagged
+  m_TagString: EnemyLaser
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,9 +40,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 575924786747146446}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyAtackPoint2
-  m_TagString: Untagged
+  m_TagString: EnemyLaser
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,9 +71,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4971409341306464062}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemySpecialAttack
-  m_TagString: Untagged
+  m_TagString: EnemyLaser
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,9 +102,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4199452460543038006}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyAtackPoint
-  m_TagString: Untagged
+  m_TagString: EnemyLaser
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,9 +133,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4574973587937387901}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyAtackPoint1
-  m_TagString: Untagged
+  m_TagString: EnemyLaser
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -441,6 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a08c17bc8e3b4b1f958fa558e5adebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explotion: {fileID: 8300000, guid: dd3c2b3d5c57346a0a4483f5e8b4bea0, type: 3}
 --- !u!60 &5917259380589014825
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -6,6 +6,9 @@ public class PlayerLaser : MonoBehaviour
 {
 
     public float speed = 5f;
+    int myScore = 0;
+    //ScoreManager scoreManager;
+
     AnimationStateChanger animationStateChanger;
     AudioSource audioSource;
     // Start is called before the first frame update}
@@ -13,6 +16,8 @@ public class PlayerLaser : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         animationStateChanger = GetComponent<AnimationStateChanger>();
+        //scoreManager = GetComponent<ScoreManager>();
+        
     }
 
     // Update is called once per frame
@@ -35,17 +40,18 @@ public class PlayerLaser : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy1")   ||
-            collision.gameObject.CompareTag("Sand")     ||
-            collision.gameObject.CompareTag("Earth")    )
+        if (collision.gameObject.CompareTag("Enemy1") ||
+            collision.gameObject.CompareTag("Sand") ||
+            collision.gameObject.CompareTag("Earth"))
         {
             Destroy(gameObject);
         }
-        if (collision.gameObject.CompareTag("Rock") || collision.gameObject.CompareTag("BigR")) {
-           // Debug.Log("¡Boom!");
-           animationStateChanger.ChangeAnimationState("Destroy", 0.01f);
-           Destroy(gameObject, 0.02f);
-           audioSource.Play();
+        if (collision.gameObject.CompareTag("Rock") || collision.gameObject.CompareTag("BigR"))
+        {
+            // Debug.Log("¡Boom!");
+            animationStateChanger.ChangeAnimationState("Destroy", 0.01f);
+            Destroy(gameObject, 0.02f);
+            audioSource.Play();
 
             //Destroy(gameObject);
 

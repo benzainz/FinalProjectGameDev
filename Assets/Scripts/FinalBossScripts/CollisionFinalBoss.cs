@@ -71,6 +71,8 @@ public class CollisionFinalBoss : MonoBehaviour
     AudioSource audioSource;
     List<Transform> childObjects = new List<Transform>();
 
+    public AudioClip explotion;
+
     int collisionsCount = 0;
     int maxCollisions = 3;
 
@@ -93,6 +95,7 @@ public class CollisionFinalBoss : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        //audioSource1 = GetComponent<AudioClip>();
     }
 
     void Update()
@@ -121,10 +124,12 @@ public class CollisionFinalBoss : MonoBehaviour
         {
             // Incrementar el contador de colisiones.
             collisionsCount++;
-            Debug.Log("colision #" + collisionsCount);
+          
 
             // Cambiar el color a rojo.
             changingColor = true;
+
+            audioSource.PlayOneShot(explotion);
 
             // Comprobar si se alcanzó el límite de colisiones.
             if (collisionsCount >= maxCollisions)
