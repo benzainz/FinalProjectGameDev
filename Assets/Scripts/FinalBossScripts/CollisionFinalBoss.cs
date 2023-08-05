@@ -1,66 +1,5 @@
 
 
-//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
-
-//public class CollisionFinalBoss : MonoBehaviour
-//{
-//    AnimationStateChanger animationStateChanger;
-//    AudioSource audioSource;
-//    List<Transform> childObjects = new List<Transform>();
-
-//    int collisionsCount = 0;
-//    int maxCollisions = 3;
-
-//    void Awake()
-//    {
-//        animationStateChanger = GetComponent<AnimationStateChanger>();
-//        foreach (Transform child in transform)
-//        {
-//            childObjects.Add(child);
-//        }
-//    }
-
-//    void Start()
-//    {
-//        audioSource = GetComponent<AudioSource>();
-//    }
-
-//    void Update()
-//    {
-
-//    }
-
-//    void OnCollisionEnter2D(Collision2D collision)
-//    {
-//        if (collision.gameObject.CompareTag("PlayerLaser"))
-//        {
-
-
-//            //// Destruir los hijos primero.
-//            //foreach (Transform child in childObjects)
-//            //{
-//            //    Destroy(child.gameObject, 0.5f);
-//            //}
-
-//            // Incrementar el contador de colisiones.
-//            collisionsCount++;
-//            Debug.Log("colision #" + collisionsCount);
-
-//            // Comprobar si se alcanzó el límite de colisiones.
-//            if (collisionsCount >= maxCollisions)
-//            {
-//                audioSource.Play();
-//                animationStateChanger.ChangeAnimationState("Destroy", 0.4f);
-//                // Si se alcanzó el límite, destruir el objeto principal.
-//                Destroy(gameObject, 0.5f);
-//            }
-//        }
-//    }
-//}
-
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -73,6 +12,7 @@ public class CollisionFinalBoss : MonoBehaviour
 
     public AudioClip explotion;
 
+    public int points = 20;
     int collisionsCount = 0;
     int maxCollisions = 3;
 
@@ -131,6 +71,8 @@ public class CollisionFinalBoss : MonoBehaviour
 
             audioSource.PlayOneShot(explotion);
 
+            GameManager.score += points;
+
             // Comprobar si se alcanzó el límite de colisiones.
             if (collisionsCount >= maxCollisions)
             {
@@ -138,6 +80,7 @@ public class CollisionFinalBoss : MonoBehaviour
                 animationStateChanger.ChangeAnimationState("Destroy", 1.3f);
                 // Si se alcanzó el límite, destruir el objeto principal.
                 Destroy(gameObject, 1.4f);
+                GameManager.score += 100;
             }
         }
     }

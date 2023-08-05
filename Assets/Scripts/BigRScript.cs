@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RockScript : MonoBehaviour
+public class BigRScript : MonoBehaviour
 {
     AnimationStateChanger animationStateChanger;
     AudioSource audioSource;
@@ -27,7 +27,7 @@ public class RockScript : MonoBehaviour
             //Debug.Log("¡Boom!");
 
             // Aquí puedes mostrar el mensaje en la pantalla o realizar cualquier otra acción deseada
-           // Debug.Log("Collision with Laser detectedEARTH");
+            // Debug.Log("Collision with Laser detectedEARTH");
 
             //animationStateChanger.ChangeAnimationState("Destroy", 0.01f);
 

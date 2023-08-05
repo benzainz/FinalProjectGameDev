@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4191547112143869946
+--- !u!1 &3135268606717156943
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 282273369052081177}
-  - component: {fileID: 589619344437442696}
-  - component: {fileID: 5746777834997453520}
-  - component: {fileID: 3321600478853861764}
+  - component: {fileID: 3262974825383587372}
+  - component: {fileID: 3880146900024321935}
+  - component: {fileID: 4374530417209027848}
+  - component: {fileID: 3835275624835217061}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -19,19 +19,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &282273369052081177
+--- !u!224 &3262974825383587372
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4191547112143869946}
+  m_GameObject: {fileID: 3135268606717156943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.02, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4197447479968680353}
+  m_Father: {fileID: 6087324834594060593}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -39,21 +39,21 @@ RectTransform:
   m_AnchoredPosition: {x: 187.23358, y: -108.7001}
   m_SizeDelta: {x: 374.46716, y: 217.4002}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &589619344437442696
+--- !u!222 &3880146900024321935
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4191547112143869946}
+  m_GameObject: {fileID: 3135268606717156943}
   m_CullTransparentMesh: 1
---- !u!114 &5746777834997453520
+--- !u!114 &4374530417209027848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4191547112143869946}
+  m_GameObject: {fileID: 3135268606717156943}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
@@ -81,20 +81,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
---- !u!114 &3321600478853861764
+--- !u!114 &3835275624835217061
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4191547112143869946}
+  m_GameObject: {fileID: 3135268606717156943}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ead1fdf0a83a14037b3a648a4c457971, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e696d760eb4140148b218d0a0029454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 5746777834997453520}
---- !u!1 &4727912012641141797
+  scoreText: {fileID: 4374530417209027848}
+--- !u!1 &6844901787233626058
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,45 +102,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4197447479968680353}
-  - component: {fileID: 3522498184179500102}
-  - component: {fileID: 6001224205093665327}
-  - component: {fileID: 3873428753168228814}
+  - component: {fileID: 6087324834594060593}
+  - component: {fileID: 2193232338798946752}
+  - component: {fileID: 6115746219587850752}
+  - component: {fileID: 3886821910011244691}
   m_Layer: 5
-  m_Name: ScoreCanvas
+  m_Name: ScoreUICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4197447479968680353
+--- !u!224 &6087324834594060593
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4727912012641141797}
+  m_GameObject: {fileID: 6844901787233626058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 282273369052081177}
+  - {fileID: 3262974825383587372}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!223 &3522498184179500102
+--- !u!223 &2193232338798946752
 Canvas:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4727912012641141797}
+  m_GameObject: {fileID: 6844901787233626058}
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
@@ -157,13 +157,13 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &6001224205093665327
+--- !u!114 &6115746219587850752
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4727912012641141797}
+  m_GameObject: {fileID: 6844901787233626058}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
@@ -180,13 +180,13 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
---- !u!114 &3873428753168228814
+--- !u!114 &3886821910011244691
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4727912012641141797}
+  m_GameObject: {fileID: 6844901787233626058}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}

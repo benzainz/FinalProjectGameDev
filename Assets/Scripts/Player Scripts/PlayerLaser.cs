@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerLaser : MonoBehaviour
 {
-
+    public int pointsPerKill = 10;
     public float speed = 5f;
     int myScore = 0;
     //ScoreManager scoreManager;
@@ -44,6 +44,7 @@ public class PlayerLaser : MonoBehaviour
             collision.gameObject.CompareTag("Sand") ||
             collision.gameObject.CompareTag("Earth"))
         {
+            GameManager.score += pointsPerKill;
             Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("Rock") || collision.gameObject.CompareTag("BigR"))

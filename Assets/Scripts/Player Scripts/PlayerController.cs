@@ -42,22 +42,35 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //MaxMovePlayer();
+        
         EndSceneCinematic();
 
-        // Verificar si se presionó la tecla 'k' y ha pasado al menos 1 segundo desde la última creación de láser
-        if (Input.GetKeyDown(KeyCode.K) && Time.time - tiempoUltimaCreacion >= 0.5f)
+        //// Verificar si se presionó la tecla 'k' y ha pasado al menos 1 segundo desde la última creación de láser
+        //if (Input.GetKeyDown(KeyCode.K) && Time.time - tiempoUltimaCreacion >= 0.5f)
+        //{
+        //    CrearLaser();
+        //    tiempoUltimaCreacion = Time.time; // Actualizar el tiempo de la última creación de láser
+
+        //}
+
+        // Verificar si NO está en cinemática y se presionó la tecla 'k' y ha pasado al menos 1 segundo desde la última creación de láser
+        if (!cinematicaIniciada && Input.GetKeyDown(KeyCode.K) && Time.time - tiempoUltimaCreacion >= 0.5f)
         {
             CrearLaser();
             tiempoUltimaCreacion = Time.time; // Actualizar el tiempo de la última creación de láser
-            
         }
+
+
+
     }
     void IniciarCinematica()
     {
         cinematicaIniciada = true;
         tiempoCinematica = 0f;
         posicionInicial = transform.position;
+       // Player_Laser.SetActive(false);
+
+
     }
 
     void EndSceneCinematic()
@@ -81,6 +94,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+           // Player_Laser.SetActive(true);
             MaxMovePlayer();
         }
     }
@@ -166,7 +180,7 @@ public class PlayerController : MonoBehaviour
 
         // Llamar a la función BackToMain del componente BackToMainMenu
         // Esto se hará después de que la corutina se haya completado.
-       // backToMainMenu.BackToMain();
+       backToMainMenu.BackToMain();
     }
 
 }
