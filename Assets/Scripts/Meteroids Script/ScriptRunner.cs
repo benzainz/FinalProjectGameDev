@@ -41,7 +41,7 @@ using UnityEngine;
 public class ScriptRunner : MonoBehaviour
 {
     public List<MonoBehaviour> scripts = new List<MonoBehaviour>(); // Lista pública de scripts
-    public float tiempoEntreScripts = 10f;
+    public float tiempoDeCadaScripts = 10f;
 
     private void Start()
     {
@@ -56,7 +56,7 @@ public class ScriptRunner : MonoBehaviour
             script.enabled = true;
 
             // Esperar el tiempo entre scripts
-            yield return new WaitForSeconds(tiempoEntreScripts);
+            yield return new WaitForSeconds(tiempoDeCadaScripts);
 
             // Desactivar el script actual
             script.enabled = false;
