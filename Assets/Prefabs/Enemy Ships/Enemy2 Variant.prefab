@@ -88,5 +88,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 636851486118661437, guid: 54cdb8ac8d8ae4174a8d14f590565528, type: 3}
   velocidadLaser: 5
-  TiempoGeneracionDeLaser: 4
+  TiempoGeneracionDeLaser: 5
   playerTag: Player
