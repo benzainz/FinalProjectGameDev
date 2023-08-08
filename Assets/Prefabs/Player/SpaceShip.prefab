@@ -38,7 +38,7 @@ Transform:
   m_Children:
   - {fileID: 5279457734725318920}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6200856143823055607
 SpriteRenderer:
@@ -182,7 +182,7 @@ MonoBehaviour:
   Player_Laser: {fileID: 4419961954671945610, guid: 1a833ff7e2eaa42c89902d4f0cc428d8, type: 3}
   attack_Point: {fileID: 5279457734725318920}
   explotionSFX: {fileID: 8300000, guid: a05a275a5c60f4ceb86b48732e6cbc0b, type: 3}
-  time4Cinema2Start: 77
+  time4Cinema2Start: 46
 --- !u!95 &2803602788657773748
 Animator:
   serializedVersion: 5

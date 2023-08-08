@@ -1,87 +1,95 @@
+//using System.Collections;
+//using UnityEngine;
+
+//public class MoveObjectDown : MonoBehaviour
+//{
+//    public float startDelay = 3f;  // Tiempo de espera antes de empezar a mover el objeto
+//    public float moveDuration = 3f; // Duración del movimiento hacia abajo
+//    public Vector3 targetPosition = new Vector3(0f, 4f, 0f); // Posición objetivo hacia donde el objeto se moverá
+
+//    private void Start()
+//    {
+//        StartCoroutine(MoveDown());
+//    }
+
+//    private IEnumerator MoveDown()
+//    {
+//        yield return new WaitForSeconds(startDelay);
+
+//        Vector3 initialPosition = transform.position;
+//        float elapsedTime = 0f;
+
+//        while (elapsedTime < moveDuration)
+//        {
+//            float t = elapsedTime / moveDuration;
+//            transform.position = Vector3.Lerp(initialPosition, targetPosition, t);
+//            elapsedTime += Time.deltaTime;
+//            yield return null;
+//        }
+
+//        // Asegurarse de que el objeto esté exactamente en la posición final
+//        transform.position = targetPosition;
+//    }
+//}
+
 using System.Collections;
 using UnityEngine;
 
 public class MovingObject : MonoBehaviour
 {
-    public GameObject prefab; // Prefab del objeto a mover
-    public float verticalSpeed = 3f; // Velocidad vertical del movimiento
-    public float horizontalSpeed = 5f; // Velocidad horizontal del movimiento
-    public float showAfter = 2f;
+    public float startDelay = 3f;  // Tiempo de espera antes de empezar a mover el objeto
+    public float moveDuration = 3f; // Duración del movimiento hacia abajo
+    public Vector3 targetPosition = new Vector3(0f, 4f, 0f); // Posición objetivo hacia donde el objeto se moverá
 
-    private bool isMovingDown = false;
-    private bool hasGeneratedPrefab = false;
-    private bool shouldMovePrefab = true;
+    [SerializeField] public float horizontalSpeed = 3f; // Velocidad de movimiento horizontal
+    public float horizontalRange = 6f; // Rango horizontal de movimiento
 
-    //private bool isMovingDownB = false;
-    //private bool hasGeneratedPrefab = false;
+    public float startHorizontalDelay = 5f; // Tiempo en segundos antes de iniciar el movimiento horizontal
 
     private void Start()
     {
-        // Invocar el método para generar el prefab después de 5 segundos
-        Invoke("GeneratePrefab", showAfter);
+        StartCoroutine(MoveDown());
+
+        StartCoroutine(StartHorizontal());
     }
 
-    private void GeneratePrefab()
+    private IEnumerator MoveDown()
     {
-        // Verificar si ya se generó el prefab para evitar generar más de uno
-        if (hasGeneratedPrefab)
-            return;
+        yield return new WaitForSeconds(startDelay);
 
-        // Instanciar el prefab en las coordenadas x=0, y=7
-        GameObject newObject = Instantiate(prefab, new Vector3(0f, 7f, 0f), Quaternion.identity);
-        StartCoroutine(MovePrefab(newObject));
+        Vector3 initialPosition = transform.position;
+        float elapsedTime = 0f;
 
-        hasGeneratedPrefab = true;
-    }
-
-    private IEnumerator MovePrefab(GameObject obj)
-    {
-        float timePassed = 0f;
-        Vector3 targetPosition = new Vector3(0f, 4f, 0f);
-        Vector3 initialPosition = obj.transform.position;
-
-        while (timePassed < 2f)
+        while (elapsedTime < moveDuration)
         {
-            if (obj !=null)
-            {
-                // Mover el objeto hacia abajo hasta y=4 en 2 segundos con la velocidad vertical especificada
-                obj.transform.position = Vector3.Lerp(initialPosition, targetPosition, timePassed / 2f) + Vector3.down * verticalSpeed * Time.deltaTime;
-                timePassed += Time.deltaTime;
-            }
+            float t = elapsedTime / moveDuration;
+            transform.position = Vector3.Lerp(initialPosition, targetPosition, t);
+            elapsedTime += Time.deltaTime;
             yield return null;
-
-        }
-        if (obj != null) // Verificar nuevamente antes de usarlo
-        {
-            obj.transform.position = targetPosition;
         }
 
-        //// Asegurarse de que el objeto no pase de y=4
-        //obj.transform.position = targetPosition;
+        // Asegurarse de que el objeto esté exactamente en la posición final
+        transform.position = targetPosition;
+    }
+
+    private IEnumerator StartHorizontal()
+    {
+        yield return new WaitForSeconds(startHorizontalDelay);
+
+        StartCoroutine(MoveHorizontal());
+    }
+
+    private IEnumerator MoveHorizontal()
+    {
+        float currentX = transform.position.x;
+        float targetX = currentX;
 
         while (true)
         {
-            // Mover el objeto horizontalmente entre x=-5 y x=5 en 3 segundos, repetidamente
-            float horizontalTimePassed = 0f;
-            Vector3 startPosition = obj.transform.position;
-            Vector3 targetXPosition = new Vector3(Random.Range(-5f, 5f), obj.transform.position.y, 0f);
-
-            while (horizontalTimePassed < 3f)
-            {
-                if (obj != null)
-                {
-                    // Mover el objeto horizontalmente con la velocidad horizontal especificada
-                    obj.transform.position = Vector3.Lerp(startPosition, targetXPosition, horizontalTimePassed / 3f);
-                    horizontalTimePassed += Time.deltaTime * horizontalSpeed; // Multiplicamos por la velocidad horizontal
-                }
-                yield return null;
-
-            }
+            targetX = Mathf.PingPong(Time.time * horizontalSpeed, horizontalRange) - horizontalRange / 2f;
+            Vector3 newPosition = new Vector3(targetX, transform.position.y, transform.position.z);
+            transform.position = newPosition;
+            yield return null;
         }
-    }
-    // Método para detener el movimiento del prefab desde fuera de la clase
-    public void StopMovePrefab()
-    {
-        shouldMovePrefab = false;
     }
 }

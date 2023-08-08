@@ -203,10 +203,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceShip
       objectReference: {fileID: 0}
-    - target: {fileID: 4555064732232245162, guid: d13194f77acaa4eeb986f67cb0ccb620, type: 3}
-      propertyPath: time4Cinema2Start
-      value: 46
-      objectReference: {fileID: 0}
     - target: {fileID: 5710477707315197586, guid: d13194f77acaa4eeb986f67cb0ccb620, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -898,10 +894,6 @@ PrefabInstance:
     - target: {fileID: 4350833500430895566, guid: 290e0ddbfa6a14fe8b301f4cfc40faa5, type: 3}
       propertyPath: m_Name
       value: Main Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430856954900431484, guid: 290e0ddbfa6a14fe8b301f4cfc40faa5, type: 3}
-      propertyPath: orthographic size
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

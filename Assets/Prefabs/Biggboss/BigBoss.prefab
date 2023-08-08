@@ -173,8 +173,9 @@ GameObject:
   - component: {fileID: 8640816888580638238}
   - component: {fileID: 5917259380589014825}
   - component: {fileID: 3612766712101629108}
+  - component: {fileID: -7576671009160473042}
   m_Layer: 8
-  m_Name: BigBoss1
+  m_Name: BigBoss
   m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,7 +199,7 @@ Transform:
   - {fileID: 1855470063387046770}
   - {fileID: 4971409341306464062}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &764869765400048993
 SpriteRenderer:
@@ -442,6 +443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explotion: {fileID: 8300000, guid: dd3c2b3d5c57346a0a4483f5e8b4bea0, type: 3}
+  points: 30
 --- !u!60 &5917259380589014825
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -520,3 +522,21 @@ MonoBehaviour:
   velocidadLaser: 5
   TiempoGeneracionDeLaser: 3
   playerTag: Player
+--- !u!114 &-7576671009160473042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9001672220051514595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef9daf6d549cd4563bd3fdef3c2b81ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startDelay: 2
+  moveDuration: 2
+  targetPosition: {x: 0, y: 4, z: 0}
+  horizontalSpeed: 3
+  horizontalRange: 6.5
+  startHorizontalDelay: 5

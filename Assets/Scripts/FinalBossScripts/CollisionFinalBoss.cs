@@ -10,11 +10,14 @@ public class CollisionFinalBoss : MonoBehaviour
     AudioSource audioSource;
     List<Transform> childObjects = new List<Transform>();
 
+    MovingObject movingObject;
+    
+
     public AudioClip explotion;
 
     public int points = 20;
     int collisionsCount = 0;
-    int maxCollisions = 3;
+    int maxCollisions = 30;
 
     Color originalColor;
     Renderer renderer;
@@ -35,6 +38,7 @@ public class CollisionFinalBoss : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        movingObject = GetComponent<MovingObject>();
         //audioSource1 = GetComponent<AudioClip>();
     }
 
@@ -73,6 +77,18 @@ public class CollisionFinalBoss : MonoBehaviour
 
             GameManager.score += points;
 
+            // Comprobar si se alcanzó el límite de colisiones.
+            if (collisionsCount == 3)
+            {
+
+                Debug.Log("Cambiar la velocidad horizontal de bigboss");
+                //BigbossMovement.GetComponent<MovingObject>().horizontalSpeed = 15;
+
+                movingObject.horizontalSpeed = 15;
+
+                Debug.Log("se ha cambiado la velocidad horizontal de bigboss");
+                GameManager.score += 100;
+            }
             // Comprobar si se alcanzó el límite de colisiones.
             if (collisionsCount >= maxCollisions)
             {
