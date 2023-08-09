@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class EarthScript : MonoBehaviour
 {
+    //public AudioClip explotionSFX;
     AnimationStateChanger animationStateChanger;
+    AudioSource audioSource;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        animationStateChanger = GetComponent<AnimationStateChanger>();
+       animationStateChanger = GetComponent<AnimationStateChanger>();
+       audioSource = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -20,16 +24,13 @@ public class EarthScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PlayerLaser"))
         {
-            //call function to play audio on collision
-            //audioSource.Play();
-            //Debug.Log("¡Boom!");
 
-            // Aquí puedes mostrar el mensaje en la pantalla o realizar cualquier otra acción deseada
-            //Debug.Log("Collision with Laser detectedEARTH");
+            GetComponent<MakeSound>().PlaySound();
 
-            animationStateChanger.ChangeAnimationState("Destroy", 0.05f);
+            animationStateChanger.ChangeAnimationState("Destroy", 0.04f);
 
-            Destroy(gameObject, 0.06f);
+            Destroy(gameObject, 0.05f);
+           
            // Destroy(collision.gameObject);
             //back to main menu funct
            // backToMainMenu.BackToMain();

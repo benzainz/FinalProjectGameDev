@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneHandler : MonoBehaviour
 {
-    public string secondSceneName; // Nombre de la segunda escena a cargar
+    public string nextScene; // Nombre de la segunda escena a cargar
     public float timeToSwitch = 60f; // Tiempo en segundos antes de cambiar a la segunda escena
 
     private float timer = 0f;
@@ -23,6 +23,6 @@ public class SceneHandler : MonoBehaviour
 
     private void SwitchToSecondScene()
     {
-        SceneManager.LoadScene(secondSceneName);
+        SceneManager.LoadScene(nextScene);
     }
 }

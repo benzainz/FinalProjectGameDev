@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class PlayerLaser : MonoBehaviour
 {
-
+    public int pointsPerKill = 10;
     public float speed = 5f;
-    AnimationStateChanger animationStateChanger;
+    int myScore = 0;
+    //ScoreManager scoreManager;
 
-    // Start is called before the first frame update
+    AnimationStateChanger animationStateChanger;
+    AudioSource audioSource;
+    // Start is called before the first frame update}
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         animationStateChanger = GetComponent<AnimationStateChanger>();
+        //scoreManager = GetComponent<ScoreManager>();
+        
     }
 
     // Update is called once per frame
@@ -30,27 +36,23 @@ public class PlayerLaser : MonoBehaviour
         temp.y += speed * Time.deltaTime;
         transform.position = temp;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy1") ||
             collision.gameObject.CompareTag("Sand") ||
             collision.gameObject.CompareTag("Earth"))
         {
-            //call function to play audio on collision
-            //audioSource.Play();
-            //Debug.Log("¡Boom!");
-
-            // Aquí puedes mostrar el mensaje en la pantalla o realizar cualquier otra acción deseada
-
-            // animator.Play("Destroy");
+            GameManager.score += pointsPerKill;
             Destroy(gameObject);
-            //Destroy(collision.gameObject);
-
         }
-        if (collision.gameObject.CompareTag("Rock")) {
-            Debug.Log("¡Boom!");
-           animationStateChanger.ChangeAnimationState("Destroy", 0.01f);
-           Destroy(gameObject, 0.02f);
+        if (collision.gameObject.CompareTag("Rock") || collision.gameObject.CompareTag("BigR"))
+        {
+            // Debug.Log("¡Boom!");
+            animationStateChanger.ChangeAnimationState("Destroy", 0.01f);
+            Destroy(gameObject, 0.02f);
+            audioSource.Play();
 
             //Destroy(gameObject);
 

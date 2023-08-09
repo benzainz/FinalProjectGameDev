@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/AaScenes/MainMenu.unity
     guid: 3e47ce4cfe1c743cc96c5327377c7dbd
   - enabled: 1
-    path: Assets/Scenes/Meteroids.unity
+    path: Assets/AaScenes/Meteroids.unity
     guid: 5e0e69d177d234d4ba7145be92a9fe8f
   - enabled: 1
-    path: Assets/Scenes/Enemies.unity
+    path: Assets/AaScenes/Enemies.unity
     guid: ec6ed6c2d9f0043efa309c2cf97b4722
   - enabled: 1
-    path: Assets/Scenes/FinalBoss.unity
+    path: Assets/AaScenes/FinalBoss.unity
     guid: 1f4ae2fa6c5684b61bde5deb6c2a37e5
   m_configObjects: {}

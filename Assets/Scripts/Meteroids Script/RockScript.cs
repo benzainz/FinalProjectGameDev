@@ -5,10 +5,12 @@ using UnityEngine;
 public class RockScript : MonoBehaviour
 {
     AnimationStateChanger animationStateChanger;
+    AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
         animationStateChanger = GetComponent<AnimationStateChanger>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -21,7 +23,7 @@ public class RockScript : MonoBehaviour
         if (collision.gameObject.CompareTag("PlayerLaser"))
         {
             //call function to play audio on collision
-            //audioSource.Play();
+            audioSource.Play();
             //Debug.Log("¡Boom!");
 
             // Aquí puedes mostrar el mensaje en la pantalla o realizar cualquier otra acción deseada

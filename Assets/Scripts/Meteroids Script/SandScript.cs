@@ -5,17 +5,14 @@ using UnityEngine;
 public class SandScript : MonoBehaviour
 {
     AnimationStateChanger animationStateChanger;
+    AudioSource audioSource;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         animationStateChanger = GetComponent<AnimationStateChanger>();
+        audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("PlayerLaser"))
@@ -25,20 +22,19 @@ public class SandScript : MonoBehaviour
             //Debug.Log("¡Boom!");
 
             // Aquí puedes mostrar el mensaje en la pantalla o realizar cualquier otra acción deseada
-          //  Debug.Log("Collision with Laser detectedEARTH");
+            //  Debug.Log("Collision with Laser detectedEARTH");
+            GetComponent<MakeSound>().PlaySound();
+            animationStateChanger.ChangeAnimationState("Destroy", 0.01f);
 
-            animationStateChanger.ChangeAnimationState("Destroy", 0.02f);
+            Destroy(gameObject, 0.02f);
 
-            Destroy(gameObject, 0.03f);
             // Destroy(collision.gameObject);
             //back to main menu funct
             // backToMainMenu.BackToMain();
 
         }
 
-    }//onCollisonEnter2D
-
-
-
+    }
+  
 }
 
