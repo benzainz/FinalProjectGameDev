@@ -5,9 +5,15 @@ public class VerificarDestruccion : MonoBehaviour
 {
     public CollisionFinalBoss collisionFinalBoss;
     public CanvasGroup canvasGroup;
+    BackToMainMenu backToMainMenu;
 
+    private void Awake()
+    {
+        backToMainMenu = GetComponent<BackToMainMenu>();
+    }
     private void Update()
     {
+
         if (collisionFinalBoss != null && collisionFinalBoss.estaDestruido)
         {
 
@@ -22,10 +28,17 @@ public class VerificarDestruccion : MonoBehaviour
         StartCoroutine(EsperarYMostrar());
         IEnumerator EsperarYMostrar()
         {
-            Debug.Log("se esta llamano a la corutina");
+           // Debug.Log("se esta llamano a la corutina");
             yield return new WaitForSeconds(3f); // Esperar 3 segundos
             canvasGroup.alpha = 1f; // Hace visible el texto y la imagen
-            Debug.Log("Corutina terminada después de 3 segundos.");
+
+            yield return new WaitForSeconds(5f);
+            Debug.Log("seras enviado al menu principal");
+            backToMainMenu.BackToMain();
+            GameManager.score = 0;
+
+
+
         }
 
 

@@ -176,11 +176,12 @@ public class PlayerController : MonoBehaviour
     IEnumerator WaitAndBackToMain()
     {
         yield return new WaitForSeconds(0.7f);
-        
+
 
         // Llamar a la función BackToMain del componente BackToMainMenu
         // Esto se hará después de que la corutina se haya completado.
-       backToMainMenu.BackToMain();
+        GameManager.score = 0;
+        backToMainMenu.BackToMain();
     }
 
 }

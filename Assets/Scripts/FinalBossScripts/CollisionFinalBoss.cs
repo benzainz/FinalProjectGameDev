@@ -167,7 +167,7 @@ public class CollisionFinalBoss : MonoBehaviour
 
     MovingObject movingObject;
     CreateFinalBossLaser createFinalBossLaser;
-    public CanvasGroup canvasGroup;
+   
 
 
 
@@ -260,13 +260,13 @@ public class CollisionFinalBoss : MonoBehaviour
                 createFinalBossLaser.velocidadLaser = 6;
                 //createFinalBossLaser1.TiempoGeneracionDeLaser = 1;
 
-                Debug.Log("se ha cambiado la velocidad horizontal de bigboss a 10");
+               // Debug.Log("se ha cambiado la velocidad horizontal de bigboss a 10");
                 GameManager.score += 100;
             }
             if (collisionsCount == 20)
             {
 
-                Debug.Log("se ha cambiado la velocidad horizontal de bigboss a 20");
+               // Debug.Log("se ha cambiado la velocidad horizontal de bigboss a 20");
                 //BigbossMovement.GetComponent<MovingObject>().horizontalSpeed = 15;
 
                 movingObject.horizontalSpeed = 9;
@@ -281,7 +281,7 @@ public class CollisionFinalBoss : MonoBehaviour
             if (collisionsCount >= maxCollisions)
             {
 
-
+                GameManager.score += 1000;
                 audioSource.Play();
                 animationStateChanger.ChangeAnimationState("Destroy", 1.3f);
 
@@ -289,7 +289,7 @@ public class CollisionFinalBoss : MonoBehaviour
                 estaDestruido = true;
                 Destroy(gameObject, 1.4f);
 
-                GameManager.score += 1000;
+               
 
 
 
