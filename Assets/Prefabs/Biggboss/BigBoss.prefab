@@ -199,7 +199,7 @@ Transform:
   - {fileID: 1855470063387046770}
   - {fileID: 4971409341306464062}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &764869765400048993
 SpriteRenderer:
@@ -538,5 +538,5 @@ MonoBehaviour:
   moveDuration: 2
   targetPosition: {x: 0, y: 4, z: 0}
   horizontalSpeed: 3
-  horizontalRange: 6.5
+  horizontalRange: 10
   startHorizontalDelay: 5

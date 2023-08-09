@@ -7,8 +7,8 @@ public class CreateFinalBossLaser : MonoBehaviour
 {
     public GameObject laserPrefab; // Prefab del primer tipo de láser
     public GameObject laserPrefab2; // Prefab del segundo tipo de láser
-    public float velocidadLaser = 5f; // Velocidad del láser
-    public float TiempoGeneracionDeLaser = 3f; // Tiempo entre generaciones de láser
+    [SerializeField] public float velocidadLaser = 5f; // Velocidad del láser
+    [SerializeField] public float TiempoGeneracionDeLaser = 3f; // Tiempo entre generaciones de láser
 
     public Transform EnemyAtackPoint;
     public Transform EnemyAtackPoint1;

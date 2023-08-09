@@ -7,7 +7,7 @@ public class HorizontalMovement : MonoBehaviour
     public float horizontalSpeed = 5f; // Velocidad horizontal del movimiento
     public float showAfter = 2f;
 
-    private bool isMovingDown = false;
+    //private bool isMovingDown = false;
     private bool hasGeneratedPrefab = false;
     private bool shouldMovePrefab = true;
 

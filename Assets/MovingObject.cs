@@ -1,37 +1,3 @@
-//using System.Collections;
-//using UnityEngine;
-
-//public class MoveObjectDown : MonoBehaviour
-//{
-//    public float startDelay = 3f;  // Tiempo de espera antes de empezar a mover el objeto
-//    public float moveDuration = 3f; // Duración del movimiento hacia abajo
-//    public Vector3 targetPosition = new Vector3(0f, 4f, 0f); // Posición objetivo hacia donde el objeto se moverá
-
-//    private void Start()
-//    {
-//        StartCoroutine(MoveDown());
-//    }
-
-//    private IEnumerator MoveDown()
-//    {
-//        yield return new WaitForSeconds(startDelay);
-
-//        Vector3 initialPosition = transform.position;
-//        float elapsedTime = 0f;
-
-//        while (elapsedTime < moveDuration)
-//        {
-//            float t = elapsedTime / moveDuration;
-//            transform.position = Vector3.Lerp(initialPosition, targetPosition, t);
-//            elapsedTime += Time.deltaTime;
-//            yield return null;
-//        }
-
-//        // Asegurarse de que el objeto esté exactamente en la posición final
-//        transform.position = targetPosition;
-//    }
-//}
-
 using System.Collections;
 using UnityEngine;
 
