@@ -7,8 +7,10 @@ public class PlayerController : MonoBehaviour
     public float limiteIzquierdo;
     public float limiteDerecho, speed;
     public GameObject Player_Laser;
+    public GameObject statusBar;
     public Transform attack_Point;
     public AudioClip explotionSFX;
+
     AudioSource audioSource;
     
     //public AudioSource audioSourceExplotion;
@@ -24,6 +26,9 @@ public class PlayerController : MonoBehaviour
     float tiempoCinematica = 0f;
     Vector3 posicionInicial;
 
+    private Color colorOriginal;
+    private Renderer renderer;
+
     private void Awake()
     {
         backToMainMenu = GetComponent<BackToMainMenu>();
@@ -33,6 +38,14 @@ public class PlayerController : MonoBehaviour
         animationStateChanger = GetComponent<AnimationStateChanger>();
         //audioSourceExplotion = GetComponent<AudioSource>();
         audioSource = GetComponent<AudioSource>();
+
+        // Obtener el componente Renderer del objeto
+        renderer = GetComponent<Renderer>();
+
+        // Almacenar el color original del objeto
+        colorOriginal = renderer.material.color;
+
+
 
 
         // Invocar el método para comenzar la cinemática después de 60 segundos (1 minuto)
@@ -68,7 +81,7 @@ public class PlayerController : MonoBehaviour
         cinematicaIniciada = true;
         tiempoCinematica = 0f;
         posicionInicial = transform.position;
-       // Player_Laser.SetActive(false);
+     
 
 
     }
@@ -130,7 +143,8 @@ public class PlayerController : MonoBehaviour
         Destroy(newObject, 2);
         audioSource.Play();
     }
-
+    int maxCollisions = 2;
+    int collisionsCount = 0;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -142,19 +156,45 @@ public class PlayerController : MonoBehaviour
             collision.gameObject.CompareTag("Fire") ||
             collision.gameObject.CompareTag("Enemy1"))
             {
+            collisionsCount++;
+
+                if (collisionsCount == 1)
+                {
+
+                statusBar.GetComponent<StatusBar>().testLife = 0.5f;
+                Destroy(collision.gameObject);
+
+                // Cambiar el color del objeto a rojo
+                renderer.material.color = Color.red;
+
+                // Iniciar la corutina para restablecer el color original después de medio segundo
+                StartCoroutine(RestablecerColor());
+                // Cambiar el color del objeto a rojo
+       
+
+            }
+                if (collisionsCount >= maxCollisions) {
                 //call function to play audio on collision
                 //audioSourceExplotion.Play();
                 audioSource.PlayOneShot(explotionSFX);
                 Destroy(collision.gameObject);
                 animationStateChanger.ChangeAnimationState("Destroy", 0.4f);
-            //Destroy(gameObject);
-            // Desactivar el componente PlayerController en lugar de destruir el objeto
-            // Esto permitirá que la corutina se ejecute antes de que el objeto sea destruido.
-            enabled = false;
-                
+                //Destroy(gameObject);
+                // Desactivar el componente PlayerController en lugar de destruir el objeto
+                // Esto permitirá que la corutina se ejecute antes de que el objeto sea destruido.
+
+                statusBar.GetComponent<StatusBar>().testLife = 0f;
+                enabled = false;
+
 
                 //back to main menu coroutine
                 StartCoroutine(WaitAndBackToMain());
+
+
+
+            }
+
+
             }
         else if (collision.gameObject.CompareTag("BigR"))
             {
@@ -167,11 +207,11 @@ public class PlayerController : MonoBehaviour
             enabled = false;
 
             //back to main menu coroutine
-            StartCoroutine(WaitAndBackToMain());
+           // StartCoroutine(WaitAndBackToMain());
 
 
         }
-    }
+    }//OnCollisionEnter2D
 
     IEnumerator WaitAndBackToMain()
     {
@@ -182,6 +222,25 @@ public class PlayerController : MonoBehaviour
         // Esto se hará después de que la corutina se haya completado.
         GameManager.score = 0;
         backToMainMenu.BackToMain();
+    }
+
+    IEnumerator RestablecerColor()
+    {
+        // Esperar medio segundo
+        yield return new WaitForSeconds(0.15f);
+
+        // Restablecer el color original del objeto
+        renderer.material.color = colorOriginal;
+
+        yield return new WaitForSeconds(0.15f);
+
+        renderer.material.color = Color.red;
+
+        // Esperar medio segundo
+        yield return new WaitForSeconds(0.15f);
+
+        // Restablecer el color original del objeto
+        renderer.material.color = colorOriginal;
     }
 
 }

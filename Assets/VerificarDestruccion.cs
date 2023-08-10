@@ -19,7 +19,7 @@ public class VerificarDestruccion : MonoBehaviour
 
 
             ShowFinalMessage();
-            Debug.Log("El objeto ha sido destruido.");
+           // Debug.Log("El objeto ha sido destruido.");
         }
     }
     public void ShowFinalMessage()
@@ -32,7 +32,7 @@ public class VerificarDestruccion : MonoBehaviour
             yield return new WaitForSeconds(3f); // Esperar 3 segundos
             canvasGroup.alpha = 1f; // Hace visible el texto y la imagen
 
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(10f);
             Debug.Log("seras enviado al menu principal");
             backToMainMenu.BackToMain();
             GameManager.score = 0;

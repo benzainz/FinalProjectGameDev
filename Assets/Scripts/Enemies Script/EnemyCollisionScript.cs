@@ -9,13 +9,18 @@ public class EnemyCollisionScript : MonoBehaviour
 {
     //Animator animator;
     AnimationStateChanger animationStateChanger;
+
+
     AudioSource audioSource;
-    // Start is called before the first frame update
+
+
+    
+
     void Awake() {
         //animator = GetComponent<Animator>();
         animationStateChanger = GetComponent<AnimationStateChanger>();
 
-
+    // Start is called before the first frame update
     }
     void Start()
     {
@@ -31,8 +36,10 @@ public class EnemyCollisionScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PlayerLaser"))
         {
-            
             audioSource.Play();
+            
+            
+            
             animationStateChanger.ChangeAnimationState("Destroy",0.4f);
             Destroy(gameObject,0.5f);
 
