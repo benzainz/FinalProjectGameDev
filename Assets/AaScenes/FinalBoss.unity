@@ -495,6 +495,11 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 7430856954900431484, guid: 290e0ddbfa6a14fe8b301f4cfc40faa5, type: 3}
   m_PrefabInstance: {fileID: 1195924767}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1279391361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3878075472919954490, guid: cd393a6bc2e4c4b1c84f123e09455677, type: 3}
+  m_PrefabInstance: {fileID: 1012144167}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1280330470
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +843,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4555064732232245162, guid: d13194f77acaa4eeb986f67cb0ccb620, type: 3}
+      propertyPath: statusBar
+      value: 
+      objectReference: {fileID: 1279391361}
     - target: {fileID: 4555064732232245162, guid: d13194f77acaa4eeb986f67cb0ccb620, type: 3}
       propertyPath: time4Cinema2Start
       value: 60

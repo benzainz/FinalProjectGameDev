@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour
                 if (collisionsCount == 1)
                 {
 
-                statusBar.GetComponent<StatusBar>().testLife = 0.5f;
+                statusBar.GetComponent<StatusBar>().ChangeStatusBar(0.5f);
                 Destroy(collision.gameObject);
 
                 // Cambiar el color del objeto a rojo
@@ -183,7 +183,7 @@ public class PlayerController : MonoBehaviour
                 // Desactivar el componente PlayerController en lugar de destruir el objeto
                 // Esto permitirá que la corutina se ejecute antes de que el objeto sea destruido.
 
-                statusBar.GetComponent<StatusBar>().testLife = 0f;
+                statusBar.GetComponent<StatusBar>().ChangeStatusBar(0f);
                 enabled = false;
 
 
@@ -207,7 +207,7 @@ public class PlayerController : MonoBehaviour
             enabled = false;
 
             //back to main menu coroutine
-           // StartCoroutine(WaitAndBackToMain());
+            StartCoroutine(WaitAndBackToMain());
 
 
         }

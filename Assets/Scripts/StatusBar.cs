@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class StatusBar : MonoBehaviour
 {
-    public float testLife = 1f;
-
+   
     public Transform bar;
 
-    public void ChangeStatusBar(float life) {
+    public void ChangeStatusBar(float life)
+    {
         // life = Mathf.Clamp(life, 0, 1);
         if (life > 1) life = 1;
         else if (life < 0) life = 0;
@@ -19,9 +19,4 @@ public class StatusBar : MonoBehaviour
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        ChangeStatusBar(testLife);
-    }
 }

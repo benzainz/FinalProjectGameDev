@@ -4,8 +4,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScriptRunner : MonoBehaviour
+public class ScriptRunnerUpgrade : MonoBehaviour
 {
+
     public List<MonoBehaviour> scripts = new List<MonoBehaviour>(); // Lista pública de scripts
     public float tiempoDeCadaScripts = 10f;
 
@@ -18,6 +19,7 @@ public class ScriptRunner : MonoBehaviour
     {
         foreach (MonoBehaviour script in scripts)
         {
+            yield return new WaitForSeconds(tiempoDeCadaScripts);
             // Activar el script actual
             script.enabled = true;
 
