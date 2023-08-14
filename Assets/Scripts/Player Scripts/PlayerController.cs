@@ -5,19 +5,26 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float limiteIzquierdo;
-    public float limiteDerecho, speed;
+    public float limiteDerecho;
+    public static float speed = 9f;
+    public static float tiempoGeneracionDeLaser = .5f;
+
+
+
+
     public GameObject Player_Laser;
     public GameObject statusBar;
     public Transform attack_Point;
     public AudioClip explotionSFX;
+    
 
     AudioSource audioSource;
-    
-    //public AudioSource audioSourceExplotion;
-    private float tiempoUltimaCreacion = 0f; // Tiempo en el que se creó el último láser
-
     AnimationStateChanger animationStateChanger;
     BackToMainMenu backToMainMenu;
+    Renderer renderer;
+
+    //public AudioSource audioSourceExplotion;
+    private float tiempoUltimaCreacion = 0f; // Tiempo en el que se creó el último láser
 
     //Cinema variables
 
@@ -27,26 +34,23 @@ public class PlayerController : MonoBehaviour
     Vector3 posicionInicial;
 
     private Color colorOriginal;
-    private Renderer renderer;
+    
 
     private void Awake()
     {
-        backToMainMenu = GetComponent<BackToMainMenu>();
+        
     }
     void Start()
     {
-        animationStateChanger = GetComponent<AnimationStateChanger>();
-        //audioSourceExplotion = GetComponent<AudioSource>();
         audioSource = GetComponent<AudioSource>();
+        animationStateChanger = GetComponent<AnimationStateChanger>();
+        backToMainMenu = GetComponent<BackToMainMenu>();
 
         // Obtener el componente Renderer del objeto
         renderer = GetComponent<Renderer>();
 
         // Almacenar el color original del objeto
         colorOriginal = renderer.material.color;
-
-
-
 
         // Invocar el método para comenzar la cinemática después de 60 segundos (1 minuto)
         Invoke("IniciarCinematica", time4Cinema2Start);
@@ -58,16 +62,8 @@ public class PlayerController : MonoBehaviour
         
         EndSceneCinematic();
 
-        //// Verificar si se presionó la tecla 'k' y ha pasado al menos 1 segundo desde la última creación de láser
-        //if (Input.GetKeyDown(KeyCode.K) && Time.time - tiempoUltimaCreacion >= 0.5f)
-        //{
-        //    CrearLaser();
-        //    tiempoUltimaCreacion = Time.time; // Actualizar el tiempo de la última creación de láser
-
-        //}
-
         // Verificar si NO está en cinemática y se presionó la tecla 'k' y ha pasado al menos 1 segundo desde la última creación de láser
-        if (!cinematicaIniciada && Input.GetKeyDown(KeyCode.K) && Time.time - tiempoUltimaCreacion >= 0.5f)
+        if (!cinematicaIniciada && Input.GetKeyDown(KeyCode.K) && Time.time - tiempoUltimaCreacion >= tiempoGeneracionDeLaser)
         {
             CrearLaser();
             tiempoUltimaCreacion = Time.time; // Actualizar el tiempo de la última creación de láser
@@ -143,6 +139,8 @@ public class PlayerController : MonoBehaviour
         Destroy(newObject, 2);
         audioSource.Play();
     }
+
+
     int maxCollisions = 2;
     int collisionsCount = 0;
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UpgradeSpeedScript : MonoBehaviour
+public class UpgradePowerScript : MonoBehaviour
 {
     //public AudioClip explotionSFX;
     //AnimationStateChanger animationStateChanger;
@@ -18,7 +18,7 @@ public class UpgradeSpeedScript : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-       // animationStateChanger = GetComponent<AnimationStateChanger>();
+        // animationStateChanger = GetComponent<AnimationStateChanger>();
         audioSource = GetComponent<AudioSource>();
         //playerController = GetComponent<PlayerController>();
 
@@ -35,9 +35,9 @@ public class UpgradeSpeedScript : MonoBehaviour
         {
 
             GetComponent<MakeSound>().PlaySound();
-            PlayerController.speed = 18;
+            PlayerController.tiempoGeneracionDeLaser = .25f;
 
-           // animationStateChanger.ChangeAnimationState("Destroy", 0.04f);
+            // animationStateChanger.ChangeAnimationState("Destroy", 0.04f);
 
             Destroy(gameObject);
 
@@ -50,3 +50,4 @@ public class UpgradeSpeedScript : MonoBehaviour
     }//onCollisonEnter2D
 
 }
+
