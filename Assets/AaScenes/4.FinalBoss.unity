@@ -266,7 +266,12 @@ MonoBehaviour:
 
     created by:
 
-    Bezaleel Sainz'
+    Bezaleel Sainz
+
+
+
+    You will
+    be sent to Main Menu!'
 --- !u!222 &413574467
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -40,8 +40,8 @@ public class EnemyCollisionScript : MonoBehaviour
             
             
             
-            animationStateChanger.ChangeAnimationState("Destroy",0.4f);
-            Destroy(gameObject,0.5f);
+            animationStateChanger.ChangeAnimationState("Destroy",0.07f);
+            Destroy(gameObject,0.08f);
 
         }
 
