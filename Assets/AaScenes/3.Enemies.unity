@@ -1664,6 +1664,10 @@ PrefabInstance:
       propertyPath: tiempoDeCadaScripts
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4710362174869197603, guid: e260a1302c3e94db68de2ec366776aa4, type: 3}
+      propertyPath: rangoX
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
