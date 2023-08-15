@@ -6,8 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     public float limiteIzquierdo;
     public float limiteDerecho;
-    public static float speed = 8f;
+    public static float speed = 6f;
     public static float tiempoGeneracionDeLaser = .5f;
+    public float destroyedLaserAfter = 3;
 
 
 
@@ -136,7 +137,7 @@ public class PlayerController : MonoBehaviour
     void CrearLaser()
     {
         GameObject newObject = Instantiate(Player_Laser, attack_Point.position, Quaternion.identity);
-        Destroy(newObject, 2);
+        Destroy(newObject, destroyedLaserAfter);
         audioSource.Play();
     }
 

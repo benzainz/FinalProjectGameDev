@@ -6,6 +6,7 @@ public class CreateEnemyLaser : MonoBehaviour
     public GameObject laserPrefab; // Prefab del láser
     public float velocidadLaser = 5f; // Velocidad del láser
     public float TiempoGeneracionDeLaser = 3f; // Velocidad del láser
+    public float DestroyLaserAfter = 3;
 
 
     private void Start()
@@ -24,7 +25,7 @@ public class CreateEnemyLaser : MonoBehaviour
 
         // Instanciar el láser en la posición calculada
         GameObject laser = Instantiate(laserPrefab, laserSpawnPosition, Quaternion.identity);
-        Destroy(laser, 3);
+        Destroy(laser, DestroyLaserAfter);
 
         // Obtener el componente Rigidbody2D del láser
         Rigidbody2D rbLaser = laser.GetComponent<Rigidbody2D>();

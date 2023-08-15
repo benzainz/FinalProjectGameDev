@@ -295,7 +295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5710477707315197586, guid: d13194f77acaa4eeb986f67cb0ccb620, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.5
+      value: -5.5
       objectReference: {fileID: 0}
     - target: {fileID: 5710477707315197586, guid: d13194f77acaa4eeb986f67cb0ccb620, type: 3}
       propertyPath: m_LocalPosition.z
@@ -785,10 +785,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScoreUICanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 8895135208802856820, guid: cd393a6bc2e4c4b1c84f123e09455677, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -30.900024
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1214,7 +1210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7430856954900431484, guid: 290e0ddbfa6a14fe8b301f4cfc40faa5, type: 3}
       propertyPath: orthographic size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

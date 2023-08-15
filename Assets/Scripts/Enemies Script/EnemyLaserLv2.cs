@@ -7,12 +7,14 @@ public class EnemyLaserLv2 : MonoBehaviour
     public GameObject laserPrefab; // Prefab del láser
     public float velocidadLaser = 5f; // Velocidad del láser
     public float TiempoGeneracionDeLaser = 3f; // Tiempo entre generación de láseres
+    public float TiempoGeneracionDeLaserP = 1f; // Tiempo entre generación de láseres
+
     public string playerTag = "Player"; // Etiqueta del jugador
 
     private void Start()
     {
         // Invocar repetidamente el método Disparar cada TiempoGeneracionDeLaser segundos
-        InvokeRepeating("Disparar", TiempoGeneracionDeLaser, TiempoGeneracionDeLaser);
+        InvokeRepeating("Disparar", TiempoGeneracionDeLaserP, TiempoGeneracionDeLaser);
     }
 
     private void Disparar()

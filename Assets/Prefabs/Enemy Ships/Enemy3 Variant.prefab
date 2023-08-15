@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1645638226337308608, guid: 87dfc725c22ed453aaa93da42ec54294, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1645638226337308608, guid: 87dfc725c22ed453aaa93da42ec54294, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.6300125
+      value: 4.7674093
       objectReference: {fileID: 0}
     - target: {fileID: 1645638226337308608, guid: 87dfc725c22ed453aaa93da42ec54294, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.298224
+      value: -2.8189878
       objectReference: {fileID: 0}
     - target: {fileID: 1645638226337308608, guid: 87dfc725c22ed453aaa93da42ec54294, type: 3}
       propertyPath: m_LocalPosition.z
@@ -87,6 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 1691887683157007391, guid: 9124efc68491647878311393877044b4, type: 3}
-  velocidadLaser: 5
+  velocidadLaser: 6
   TiempoGeneracionDeLaser: 5
+  TiempoGeneracionDeLaserP: 2
   playerTag: Player

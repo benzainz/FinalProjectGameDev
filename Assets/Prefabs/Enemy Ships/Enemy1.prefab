@@ -318,8 +318,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 4630968243675808276, guid: fdb65f70ca238422dabd12b98e206d0f, type: 3}
-  velocidadLaser: 3.55
-  TiempoGeneracionDeLaser: 3
+  velocidadLaser: 4
+  TiempoGeneracionDeLaser: 2
+  DestroyLaserAfter: 4
 --- !u!114 &4804246131173465324
 MonoBehaviour:
   m_ObjectHideFlags: 0
