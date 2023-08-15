@@ -6,13 +6,13 @@ public class EarthScript : MonoBehaviour
 {
     //public AudioClip explotionSFX;
     AnimationStateChanger animationStateChanger;
-    AudioSource audioSource;
+    MakeSound makeSound;
     // Start is called before the first frame update
     void Awake()
     {
        animationStateChanger = GetComponent<AnimationStateChanger>();
-       audioSource = GetComponent<AudioSource>();
-
+       
+        makeSound = GetComponent<MakeSound>();
     }
 
     // Update is called once per frame
@@ -25,7 +25,8 @@ public class EarthScript : MonoBehaviour
         if (collision.gameObject.CompareTag("PlayerLaser"))
         {
 
-            GetComponent<MakeSound>().PlaySound();
+            // GetComponent<MakeSound>().PlaySound();
+            makeSound.PlaySound();
 
             animationStateChanger.ChangeAnimationState("Destroy", 0.04f);
 

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4231840625126770707}
   - component: {fileID: 536443771623403735}
   - component: {fileID: -4197811562397447274}
+  - component: {fileID: 4804246131173465324}
   m_Layer: 8
   m_Name: Enemy1
   m_TagString: Enemy1
@@ -37,7 +38,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9165167258460607162
 SpriteRenderer:
@@ -173,9 +174,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 188274200956373127, guid: 060a34cf21914440daeb3172039fc7a9, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 80dc75fbcf8564e0d8f73022276e1ed6, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.46
+  m_Volume: 0.32
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -292,7 +293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d188ea39773244de3b2b204ae9f5f546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDestroyed: 0
 --- !u!114 &536443771623403735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,3 +320,16 @@ MonoBehaviour:
   laserPrefab: {fileID: 4630968243675808276, guid: fdb65f70ca238422dabd12b98e206d0f, type: 3}
   velocidadLaser: 3.55
   TiempoGeneracionDeLaser: 3
+--- !u!114 &4804246131173465324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6253952361851138012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b54a25cba83400589f42a81fbf597e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 80dc75fbcf8564e0d8f73022276e1ed6, type: 3}

@@ -19,6 +19,8 @@ public class VerificarDestruccion : MonoBehaviour
 
 
             ShowFinalMessage();
+            PlayerController.speed = 8;
+            PlayerController.tiempoGeneracionDeLaser = 0.5f;
            // Debug.Log("El objeto ha sido destruido.");
         }
     }

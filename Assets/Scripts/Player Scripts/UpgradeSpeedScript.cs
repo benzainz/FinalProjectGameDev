@@ -35,7 +35,7 @@ public class UpgradeSpeedScript : MonoBehaviour
         {
 
             GetComponent<MakeSound>().PlaySound();
-            PlayerController.speed = 18;
+            PlayerController.speed = 12;
 
            // animationStateChanger.ChangeAnimationState("Destroy", 0.04f);
 

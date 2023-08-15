@@ -526,7 +526,7 @@ MonoBehaviour:
   spawnHeight: 8
   destroyedAfter: 9
   tiempoTotalGeneracion: 10
---- !u!1001 &281802424
+--- !u!1001 &547794509
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -540,11 +540,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 323709602880041997, guid: d4d25242963c047dd8e655f627a6f910, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.4482644
+      value: 3.8509588
       objectReference: {fileID: 0}
     - target: {fileID: 323709602880041997, guid: d4d25242963c047dd8e655f627a6f910, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2251976
+      value: 0.8520572
       objectReference: {fileID: 0}
     - target: {fileID: 323709602880041997, guid: d4d25242963c047dd8e655f627a6f910, type: 3}
       propertyPath: m_LocalPosition.z
@@ -719,6 +719,10 @@ PrefabInstance:
     - target: {fileID: 3233826144867758541, guid: 9057d3dc6aafb41baa6fd335216af789, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8673210194516738449, guid: 9057d3dc6aafb41baa6fd335216af789, type: 3}
+      propertyPath: m_Volume
+      value: 0.344
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

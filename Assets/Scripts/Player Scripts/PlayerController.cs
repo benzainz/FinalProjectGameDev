@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float limiteIzquierdo;
     public float limiteDerecho;
-    public static float speed = 9f;
+    public static float speed = 8f;
     public static float tiempoGeneracionDeLaser = .5f;
 
 
