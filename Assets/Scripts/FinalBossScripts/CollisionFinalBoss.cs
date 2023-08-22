@@ -17,7 +17,7 @@ public class CollisionFinalBoss : MonoBehaviour
     public bool estaDestruido = false;
     public int points = 20;
     int collisionsCount = 0;
-    int maxCollisions = 30;
+    int maxCollisions = 50;
 
     Color originalColor;
    

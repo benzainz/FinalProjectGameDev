@@ -185,6 +185,9 @@ public class PlayerController : MonoBehaviour
                 statusBar.GetComponent<StatusBar>().ChangeStatusBar(0f);
                 enabled = false;
 
+                //reset powers
+                PlayerController.speed = 6;
+                PlayerController.tiempoGeneracionDeLaser = .5f;
 
                 //back to main menu coroutine
                 StartCoroutine(WaitAndBackToMain());
@@ -204,6 +207,10 @@ public class PlayerController : MonoBehaviour
             // Desactivar el componente PlayerController en lugar de destruir el objeto
             // Esto permitirá que la corutina se ejecute antes de que el objeto sea destruido.
             enabled = false;
+
+            //reset powers
+            PlayerController.speed = 6;
+            PlayerController.tiempoGeneracionDeLaser = .5f;
 
             //back to main menu coroutine
             StartCoroutine(WaitAndBackToMain());
