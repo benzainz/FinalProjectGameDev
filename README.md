@@ -21,7 +21,7 @@ To run the game locally or on your server:
 4. Navigate to the `index.html` file in your web browser to play the game.
 
 ## How to Play
-1. Open the game by visiting the following link: [Mr. Space on itch.io](https://bezaleel81.itch.io/mrspace4mac).
+1. Open the game by visiting the following link:https://bezaleel81.itch.io/mrspacewebgl, to dowload the game go to: [Mr. Space on itch.io](https://bezaleel81.itch.io/mrspace4mac).
 2. Use the arrow keys (or on-screen controls for mobile) to move the character.
 3. Navigate through levels, avoid obstacles, and reach the end to progress.
 4. Collect power-ups and defeat enemies along the way.
