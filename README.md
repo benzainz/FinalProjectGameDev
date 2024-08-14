@@ -35,4 +35,4 @@ To run the game locally or on your server:
 This project is licensed under the ISC License.
 
 ## Contact
-For any questions or feedback, feel free to reach out to the developer at bezaleel81@gmail.com.
+For any questions or feedback, feel free to reach out to the developer at hueroacapulco@gmail.com.
